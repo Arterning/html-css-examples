@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<style type="text/css">
+  body,p,h3{
+    margin:0px;
+  }
+  a{
+    text-decoration: none;/*去掉下划线*/
+  }
+  .product{
+    width:268px;
+    /* height:400px; */
+    /* background-color: red; */
+    margin:50px auto;
+    border:1px solid #ddd;
+    text-align: center;
+  }
+  .product a{
+    display:block;
+  }
+  .product p.describe{
+    font-size:16px ;
+    font-weight: 400;
+    color:#845f3f;
+  }
+  .product .product-text{
+    /* height:100px; */
+    background-color: #f8f8f8;
+    margin-top:20px;/*上外边距20px*/
+    padding:15px;/*上下左右内边距15px*/
+
+  }
+
+  .product .product-text .product-mark{
+    font-size: 0px;
+  }
+  .product .product-text .product-mark img{
+    margin:0px 2px;
+  }
+  .product .product-text h3{
+    font-size: 20px;
+    font-weight:400 ;
+    margin-top:10px;
+    color:#000;
+  }
+
+  .product .product-text p{
+    font-size:20px ;
+    color:#a92112;
+    margin-top:5px;
+  }
+</style>
+
+<div class="product">
+  <!--添加超链接，实现点击后跳转到新页面-->
+  <a href="https://www.icodingedu.com" target="_blank">
+    <img src="images/kettle.png" alt="电水壶" width="195px">
+    <p class="describe">快速煮水，安心饮用</h3>
+    <div class="product-text">
+      <div class="product-mark">
+        <img src="images/live.png" alt="直播中" height="20">
+        <img src="images/odds.png" alt="特惠中" height="20">
+        <img src="images/30day.png" alt="30天保价" height="20">
+        <img src="images/server.png" alt="售后免邮" height="20">
+      </div>
+      <h3>云米电水壶</h3>
+      <p>￥59</p>
+    </div>
+  </a>
+</div>
+</html>

@@ -1,0 +1,51 @@
+
+<style>
+    body{
+        margin:0;
+    }
+    .loading{
+        width:200px;
+        height: 200px;
+        background-color: skyblue;
+        margin:100px auto 0px;
+        position: relative;
+    }
+    .loading .item{
+        width:20px;
+        height: 20px;
+        /* background-color: yellow; */
+        background-color: rgba(255,255,255,.2);
+        border-radius: 50%;
+        position: absolute;
+        top:0px;
+        left:50%;
+        margin-left:-10px;
+        transform-origin: 10px 100px;
+        transform: rotate(calc(var(--i) * 40deg));
+        animation: loading 2s ease calc(var(--i) * 0.11s ) infinite;
+    }
+
+    
+    @keyframes loading {
+        0%,50%{
+            background-color: rgba(255,255,255,.2);/*前1秒为白色有透明*/
+        }
+        50.5%,100%{
+            background-color: #fff;/*后一秒 背景色为白色*/
+        }
+    }
+    
+    </style>
+    <body>
+        <div class="loading">
+            <div class="item" style="--i:0"></div>
+            <div class="item" style="--i:1"></div>
+            <div class="item" style="--i:2"></div>
+            <div class="item" style="--i:3"></div>
+            <div class="item" style="--i:4"></div>
+            <div class="item" style="--i:5"></div>
+            <div class="item" style="--i:6"></div>
+            <div class="item" style="--i:7"></div>
+            <div class="item" style="--i:8"></div>
+        </div>
+    </body>

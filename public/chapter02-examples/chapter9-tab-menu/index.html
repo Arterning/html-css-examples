@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 
+        1. display 类型替换
+        2. vertical-align 属性
+        3. css 精灵图
+        4. padding实现水平居中
+        5. font-size=0 空袭消除
+     -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: aquamarine;
+            width: 800px;
+            /* height: 50px; */
+            border-radius: 50px;
+
+            margin: 50px auto 0px;
+
+            /* 日常去除间隙 */
+            font-size: 0px;
+
+            /* span居中显示 */
+            text-align: center;
+
+            padding: 5px 0px;
+        }
+
+        .container span {
+
+            border: 1px solid;
+
+            display: inline-block;
+            height: 40px;
+
+            /* 内容需要居中展示 但是每个内容宽度又不一样 */
+            /* 所以宽度不能写死 通过内边距的方式 进行水平居中*/
+            padding: 0px 40px;
+
+            /* 垂直居中 */
+            line-height: 40px;
+
+            font-size: 20px;
+
+            border-radius: 50px;
+
+        }
+
+        .container span i {
+            width: 26px;
+            height: 25px;
+            border: 1px solid red;
+            display: inline-block;
+
+            /* 垂直方向居中 只对于inline-block有效 */
+            vertical-align: middle;
+
+            margin-right: 5px;
+        }
+
+        .container span i.icon1 {
+            background-image: url(images/icon.png);
+            /* 所谓的精灵图技术 就是返回一张图片 根据需要展示不同的位置 */
+            /* 通过background-position设置图片的位置 */
+            background-position: -26px 0px;
+        }
+
+        .container span i.icon2 {
+            background-image: url(images/icon.png);
+            background-position: -52px 0px;
+        }
+
+        /* 选中状态 */
+        .container span.current {
+            background-color: #fe94a9;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <span><i class="icon1"></i>AA</span>
+        <span><i class="icon1"></i>AA</span>
+        <span class="current"><i class="icon1"></i>AA</span>
+        <span><i class="icon1"></i>AA</span>
+    </div>
+</body>
+</html>

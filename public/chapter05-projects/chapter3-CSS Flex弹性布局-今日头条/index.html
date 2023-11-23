@@ -1,0 +1,170 @@
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body{
+            margin:0;
+        }
+        a{
+            text-decoration: none;
+        }
+        .show-monitor{
+            width:320px;
+            /* height: 600px; */
+            /* border:1px solid red; */
+            margin:50px auto 50px;
+        }
+        .show-monitor .panel-head{
+            display: flex;
+            align-items: center;
+            margin-bottom:10px;
+        }
+        .show-monitor .panel-head span.panel-head-title{
+            flex-grow: 1;
+            font-size:20px ;
+            margin-left:10px;
+        }
+        .show-monitor .panel-head span.panel-head-sx{
+            margin-left:5px;
+        }
+        .panel-con{
+            height: 94px;
+            /* background-color: beige; */
+            display: flex;
+            margin-top:20px;
+        }
+        .panel-con .panel-con-img{
+            width:126px ;
+            /* background-color: aqua; */
+            margin-right:10px;
+            flex-shrink: 0;
+        }
+        .panel-con .panel-con-txt{
+            /* background-color: bisque; */
+            flex-grow: 1;
+        }
+        /* .panel-con .panel-con-img a{
+           border:1px solid red;
+           display: block;
+           height: 94px;
+       } */
+        .panel-con .panel-con-img a img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .panel-con .panel-con-txt{
+            display: flex;
+            flex-direction: column;
+        }
+        .panel-con .panel-con-txt a{
+            font-size: 16px;
+            color:#222;
+            max-height: 44px;
+            line-height: 22px;
+            overflow: hidden;
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            text-overflow: ellipsis;
+        }
+        .panel-con .panel-con-txt span.like{
+            font-size: 12px;
+            /* border:1px solid red; */
+            color: #f04142;
+            background: #fff2f2;
+            border-radius: 4px;
+            align-self: flex-start;
+            padding: 3px 6px;
+            margin-top:5px;
+        }
+        .panel-con .panel-con-txt .desc{
+            color:#999;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            margin-top:5px;
+        }
+    </style>
+</head>
+
+
+<body>
+<div class="show-monitor">
+    <!--头部开始-->
+    <div class="panel-head">
+        <img src="photo.webp" alt="" width="22">
+        <span class="panel-head-title">热门视频</span>
+        <img src="images/icon-sx2.png" alt="" width="16">
+        <span class="panel-head-sx">换一换</span>
+    </div>
+    <!--内容开始-->
+    <div class="panel-con">
+        <div class="panel-con-img">
+            <a href="">
+                <img src="photo.webp" alt="" >
+            </a>
+        </div>
+        <div class="panel-con-txt">
+            <a href="" class="title">司马南：中国与俄罗斯的底线</a>  
+            <span class="like">1万评论</span>
+            <div class="desc">
+                <span>148万次观看</span>
+                <span>司马南频道</span>
+            </div>
+        </div>
+    </div>
+    <!--内容结束-->
+     <!--内容开始-->
+     <div class="panel-con">
+        <div class="panel-con-img">
+            <a href="">
+                <img src="photo.webp" alt="" >
+            </a>
+        </div>
+        <div class="panel-con-txt">
+            <a href="" class="title">无论腌什么鱼，最忌放盐和料酒腌制，大厨教你绝招，鱼肉鲜嫩不腥</a>  
+            <span class="like">1万分享</span>
+            <div class="desc">
+                <span>46万次观看</span>
+                <span>家常的味道</span>
+            </div>
+        </div>
+    </div>
+    <!--内容结束-->
+    <!--内容开始-->
+    <div class="panel-con">
+        <div class="panel-con-img">
+            <a href="">
+                <img src="photo.webp" alt="" >
+            </a>
+        </div>
+        <div class="panel-con-txt">
+            <a href="" class="title">阿富汗一夫多妻家庭环境“惊倒众人”，女孩的愿望能否实现？</a>  
+            <span class="like">5万点赞</span>
+            <div class="desc">
+                <span>173万次观看</span>
+                <span>耀阳环游记</span>
+            </div>
+        </div>
+    </div>
+    <!--内容结束-->
+    <!--内容开始-->
+    <div class="panel-con">
+        <div class="panel-con-img">
+            <a href="">
+                <img src="photo.webp" alt="" >
+            </a>
+        </div>
+        <div class="panel-con-txt">
+            <a href="" class="title">上海疫情梳理及我们为什么不能躺平？</a>  
+            <span class="like">2万点赞</span>
+            <div class="desc">
+                <span>228万次观看</span>
+                <span>财经林妹妹</span>
+            </div>
+        </div>
+    </div>
+    <!--内容结束-->
+</div>
+</body>

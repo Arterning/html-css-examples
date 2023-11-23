@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+    商品二级菜单效果开发
+ -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+            background-image: linear-gradient(to right, skyblue, #fff);
+        }
+
+        /* 设置margin和padding的时候 中间不要加逗号 而且每一个后面都要加px */
+        /* margin和padding的方向都是上右下左 顺时针方向 */
+        .menu {
+            width: 230px;
+            height: 400px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px 0px;
+            margin: 50px 0px 0px 50px;
+            position: relative;
+        }
+
+        .item {
+            height: 40px;
+            border: 1px solid pink;
+
+            /* text */
+            color: #fff;
+            font-size: medium;
+            /* text 垂直居中 */
+            line-height: 40px;
+
+            padding-left: 30px;
+            background: url(images/xx.png) no-repeat 20px 10px;
+            cursor: pointer;
+        }
+
+        .item:hover {
+            background-color: #ff6700;
+        }
+
+        .nav {
+            min-width: 250px;
+            height: 460px;
+            background: #fff;
+            border: 1px solid #666;
+            position: absolute;
+
+            /*  */
+            left: 230px;
+            top: 0px;
+
+            box-sizing: border-box;
+
+            /* grid 6行1列 排不下的换一列 下一列为隐式网格 这样就可以根据内容来设置网格 */
+            display: grid;
+            grid-template-rows: repeat(6, 1fr);
+            grid-template-columns: 250px;
+            /* 排不下就换一列 */
+            grid-auto-flow: column;
+            /* 设置隐式网格的宽度 */
+            grid-auto-columns: 250px;
+
+            /* 设置内边距 */
+            padding: 20px;
+
+            /* 一开始需要隐藏 */
+            display: none;
+        }
+
+        .item .nav a {
+            border: 1px solid skyblue;
+
+            /* 垂直方向居中 */
+            display: flex;
+            align-items: center;
+        }
+
+        .item .nav a:hover {
+            color: #ff6700;
+        }
+
+        .item .nav a img {
+            margin-right: 10px;
+        }
+
+        /* hover的时候展示旁边的二级菜单 */
+        .item:hover .nav {
+            display: grid;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <!-- .item*10 创建10个 -->
+        <div class="item">看看美女
+            <div class="nav">
+                <!-- a{$}*20 创建20个 -->
+                <a href="">
+                    <img src="woman.jpg" width="20" height="20"/>
+                    超级美女
+                </a>
+                <a href="">2</a>
+                <a href="">3</a>
+                <a href="">4</a>
+                <a href="">5</a>
+                <a href="">6</a>
+                <a href="">7</a>
+                <a href="">8</a>
+                <a href="">9</a>
+                <a href="">10</a>
+            </div>
+        </div>
+        <div class="item">df</div>
+        <div class="item">dfds</div>
+        <div class="item">sdf</div>
+        <div class="item">sdfs</div>
+        <div class="item">sdfsd</div>
+        <div class="item">sdfs</div>
+        <div class="item">sdf</div>
+        <div class="item">sdf</div>
+        <div class="item">sdf</div>
+    </div>
+</body>
+
+</html>

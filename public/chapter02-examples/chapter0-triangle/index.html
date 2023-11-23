@@ -1,0 +1,35 @@
+
+<style type="text/css">
+    .square {
+        /*width:50px;*/
+        /*height:50px;*/
+
+        /*--更改代码处--*/
+        width:0px;
+        height:0px;
+        background-color: red;
+        border-top:50px solid blue;/*上边框线*/
+        border-right:50px solid yellow;/*右边框线*/
+        border-bottom:50px solid greenyellow;/*下边框线*/
+        border-left:50px solid orange;/*左边框线*/
+    }
+
+    /*总结 绘制三角形 就是设置一个方向的边框 其他方向都设置为透明*/
+    /*设置三个边框颜色为透明，实现三角形*/
+    .triangle{
+        width:0;
+        height:0;
+        /* background-color: red; */
+        border:50px solid transparent;/*把四个方向的边框全设为透明*/
+        border-top:50px solid blue;/*单独控制上边框*/
+        /*
+        border-right:50px solid transparent;
+        border-bottom:50px solid transparent;
+        border-left:50px solid transparent;
+        */
+    }
+</style>
+<body>
+<div class="square"></div>
+<div class="triangle"></div>
+</body>

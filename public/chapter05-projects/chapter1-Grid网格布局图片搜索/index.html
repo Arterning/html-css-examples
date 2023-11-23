@@ -1,0 +1,59 @@
+<style>
+    body{
+        margin:0;
+   }
+    .container{
+        width:100%;
+        /* height: 700px; */
+        /* background-color: skyblue; */
+        margin-top:100px;
+
+        /* grid布局 */
+        display: grid;
+        grid-template-rows: 207px 155px 259px;
+        grid-template-columns:420px 365px 299px 118px 296px ;
+        gap:3px 3px;
+        justify-content: center;
+        grid-template-areas:'a b c c h '
+                            'a b d e e'
+                            'a f d e e ';
+   }
+    .item:nth-child(1){
+        grid-area: a;
+        background-color: aliceblue;
+   }
+    .item:nth-child(2){
+        grid-area: b;
+        background-color: azure;
+   }
+    .item:nth-child(3){
+        grid-area: f;
+        background-color: cadetblue;
+   }
+    .item:nth-child(4){
+        grid-area: c;
+   }
+    .item:nth-child(5){
+        grid-area: d;
+   }
+    .item:nth-child(6){
+        grid-area: h;
+        background-color: pink;
+   }
+    .item:nth-child(7){
+        grid-area: e;
+   }
+  
+</style>
+
+<body>
+<div class="container">
+    <div class="item">A<img src="images/grid-01.jpg" alt=""></div>
+    <div class="item">A<img src="images/grid-02.jpg" alt=""></div>
+    <div class="item">A<img src="images/grid-04.jpg" alt=""></div>
+    <div class="item">A<img src="images/grid-05.jpg" alt=""></div>
+    <div class="item">A</div>
+    <div class="item">A<img src="images/grid-06.jpg" alt=""></div>
+    <div class="item">A<img src="images/grid-03.jpg" alt=""></div>
+</div>
+</body>

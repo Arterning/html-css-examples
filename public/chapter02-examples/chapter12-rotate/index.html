@@ -1,0 +1,84 @@
+<style>
+    body{
+        margin:0px;
+        background-color: #000;
+    }
+
+    .scene-3d{
+        width:600px;
+        height: 300px;
+        /* border:2px solid red; */
+        margin:100px auto 0px;
+
+        /* 视角大小 */
+        perspective: 800px;
+    }
+
+
+    .scene-3d .box{
+        width:600px;
+        height: 300px;
+        /* background-color: yellow; */
+        /* transition: all ease 1s; */
+        transform-style: preserve-3d;
+
+        /* 设置动画的 名字 播放速度 时间 */
+        animation: rotate 10s ease infinite;
+    }
+
+    /* 鼠标悬停暂停播放 */
+    .scene-3d .box:hover{
+        animation-play-state: paused;
+    }
+
+
+    .scene-3d:hover .box{
+        /* transform: rotateY(-300deg); */
+    }
+
+    .box .item{
+        width:200px;
+        height: 200px;
+        background-color: pink;
+        position: absolute;
+        bottom:0px;
+        left:50%;
+        margin-left:-100px;
+
+        /* translateZ(300px) 就是向Z轴移动300px */
+        transform:rotateY(calc(var(--i) * 40deg )) translateZ(300px) ;
+    }
+
+    .box .item:nth-child(2){
+        /* background-color: blue; */
+    }
+
+    @keyframes rotate {
+        0%{
+            transform:rotateX(-10deg) rotateY(0deg);
+        }
+        100%{
+            transform:rotateX(-10deg)  rotateY(360deg);
+        }
+    }
+
+
+</style>
+
+<body>
+<div class="scene-3d">
+    <div class="box">
+        <div class="item" style="--i:0">
+            <img src="images/3dmm-01.webp" alt="" width="200" height="200">
+        </div>
+        <div class="item" style="--i:1"> <img src="images/3dmm-02.webp" alt="" width="200" height="200"></div>
+        <div class="item" style="--i:2"> <img src="images/3dmm-03.webp" alt="" width="200" height="200"></div>
+        <div class="item" style="--i:3"> <img src="images/3dmm-04.webp" alt="" width="200" height="200"></div>
+        <div class="item" style="--i:4"> <img src="images/3dmm-05.webp" alt="" width="200" height="200"></div>
+        <div class="item" style="--i:5"> <img src="images/3dmm-06.webp" alt="" width="200" height="200"></div>
+        <div class="item" style="--i:6"> <img src="images/3dmm-07.webp" alt="" width="200" height="200"></div>
+        <div class="item" style="--i:7"> <img src="images/3dmm-08.webp" alt="" width="200" height="200"></div>
+        <div class="item" style="--i:8"> <img src="images/3dmm-09.webp" alt="" width="200" height="200"></div>
+    </div>
+</div>
+</body>

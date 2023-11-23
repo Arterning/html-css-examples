@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 120px;
+            background: yellow;
+        }
+
+        .child {
+            float: left;/*给子元素设置浮动*/
+            width: 100px;
+            height: 100px;
+            background: red;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- 父元素的高度消失了 
+因为子元素设置浮动后会脱离标准的文档流
+所以父元素无法获取子元素的高度，自然也无法自适应高度。
+
+-->
+    <div class="father">
+        <div class="child">hello</div>
+    </div>
+</body>
+
+</html>

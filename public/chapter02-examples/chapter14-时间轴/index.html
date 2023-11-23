@@ -1,0 +1,163 @@
+<style>
+    body{
+        background-image: linear-gradient(to right,#fdf1d7,#b1bbf9);
+        margin:0;
+    }
+    h3{
+        margin:0;
+        padding:0;
+    }
+    .clearfix::after{
+        content:"";
+        display:block;
+        clear:both;
+    }
+    .time-axis{
+        width:804px;
+        /* height:700px; */
+        border:2px solid red;
+        margin:50px auto 0px;
+    }
+    .time-axis .left{
+        width:400px;
+        /* height:300px; */
+        /* background-color: #fdf1d7; */
+        float: left;
+        border-right:4px solid #b1bbf9;
+        position: relative;
+    }
+    .time-axis .right{
+        width:400px;
+        /* height:300px; */
+        /* background-color: azure; */
+        float: right;
+        border-left:4px solid #b1bbf9;
+        position: relative;
+    }
+    .dot{
+        width:10px;
+        height:10px;
+        display: block;
+        background-color:#fff;
+        border:2px solid #b1bbf9;
+        border-radius: 7px;
+        position: absolute;
+        
+        top:50%;
+        margin-top:-7px;
+    }
+    .left .dot{
+        right:-9px;
+    }
+    .right .dot{
+        left:-9px;
+    }
+    .jiantou{
+        width:32px;
+        height:32px;
+        /* border:1px solid red; */
+        display: block;
+        background-image: url(images/r-jiantou.png);
+        position: absolute;
+        right:0px;
+        top:50%;
+        margin-top:-16px;
+    }
+    .right .jiantou{
+        left:0px;
+        background-image: url(images/l-jiantou.png);
+    }
+
+.con{
+    /* height:200px; */
+    background-color: #fff;
+    border-radius: 10px;
+    margin-right: 20px;
+    text-align: center;
+    padding:20px;
+}
+.right .con{
+    margin-right:0px;
+    margin-left:20px;
+    
+    
+}
+.con h3{
+    /* border:1px solid red; */
+    font-weight: 400;
+    text-align: center;
+}
+.con h3 span{
+    font-size: 34px;
+    font-family: Arial;
+    font-weight: 800;
+    color:#b1bbf9;
+}
+</style>
+
+<body>
+<div class="time-axis clearfix">
+    <div class="left">
+        <span class="dot"></span>
+        <span class="jiantou"></span>
+        <div class="con">
+            <h3><span>“ </span>春季腹泻要当心，益生菌要这样...<span> ”</span></h3>
+            <img src="images/axis01.jpg" alt="" width="300">
+        </div>
+    </div>
+    <div class="right">
+        <span class="dot"></span>
+        <span class="jiantou"></span>
+        <div class="con">
+            <h3><span>“ </span>春季腹泻要当心，益生菌要这样...<span> ”</span></h3>
+        </div>
+    </div>
+    <div class="left">
+        <span class="dot"></span>
+        <span class="jiantou"></span>
+        <div class="con">
+            <h3><span>“ </span>春季腹泻要当心，益生菌要这样...<span> ”</span></h3>
+           
+        </div>
+    </div>
+    <div class="right">
+        <span class="dot"></span>
+        <span class="jiantou"></span>
+        <div class="con">
+            <h3><span>“ </span>春季腹泻要当心，益生菌要这样...<span> ”</span></h3>
+            <img src="images/axis02.jpg" alt="" width="300">
+        </div>
+    </div>
+    <div class="left">
+        <span class="dot"></span>
+        <span class="jiantou"></span>
+        <div class="con">
+            <h3><span>“ </span>春季腹泻要当心，益生菌要这样...<span> ”</span></h3>
+            <img src="images/axis01.jpg" alt="" width="300">
+        </div>
+    </div>
+    <div class="right">
+        <span class="dot"></span>
+        <span class="jiantou"></span>
+        <div class="con">
+            <h3><span>“ </span>春季腹泻要当心，益生菌要这样...<span> ”</span></h3>
+        </div>
+    </div>
+    <div class="left">
+        <span class="dot"></span>
+        <span class="jiantou"></span>
+        <div class="con">
+            <h3><span>“ </span>春季腹泻要当心，益生菌要这样...<span> ”</span></h3>
+           
+        </div>
+    </div>
+    <div class="right">
+        <span class="dot"></span>
+        <span class="jiantou"></span>
+        <div class="con">
+            <h3><span>“ </span>春季腹泻要当心，益生菌要这样...<span> ”</span></h3>
+            <img src="images/axis02.jpg" alt="" width="300">
+        </div>
+    </div>
+</div>
+</body>

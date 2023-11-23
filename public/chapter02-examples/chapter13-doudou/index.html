@@ -1,0 +1,102 @@
+<style>
+    body{
+        margin:0;
+   }
+    .eat-peas{
+        width:600px;
+        height: 200px;
+        /* background-color:bisque ; */
+        margin:150px auto 0px;
+        position: relative;
+   }
+
+   /* 头部 */
+    .eat-peas .head{
+        width:200px;
+        height: 200px;
+        /* border:2px solid blue; */
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+   }
+    .eat-peas .head::before{
+        content: "";
+        display: block;
+        width:200px;
+        height: 100px;
+        background-color: tomato;
+        transform-origin: bottom center;
+        animation: rotate1 .4s ease infinite alternate ;
+   }
+    .eat-peas .head::after{
+        content: "";
+        display: block;
+        width:200px;
+        height: 100px;
+        background-color: tomato;
+        transform-origin: top center;
+        animation: rotate2 .4s ease infinite alternate ;
+   }
+
+   /* 眼睛 */
+    .head .eye{
+        width:20px;
+        height: 20px;
+        background-color: #000;
+        border:2px solid #fff;
+        position: absolute;
+        left:85px;
+        top:20px;
+        border-radius: 50%;
+   }
+    .eat-peas .peas{
+        width: 40px;
+        height: 40px;
+        background-color: tomato;
+        border-radius: 50%;
+        position: absolute;
+        left:120px;
+        top:50%;
+        margin-top:-20px;
+        box-shadow: 70px 0px 0px tomato,140px 0px 0px tomato,210px 0px 0px tomato,280px 0px 0px tomato,350px 0px 0px tomato;
+        animation: move 0.8s ease infinite;
+   }
+
+    @keyframes rotate1 {
+        0%{
+            transform: rotate(0deg);
+       }
+        100%{
+            transform: rotate(-30deg);
+       }
+   }
+
+    @keyframes rotate2 {
+        0%{
+            transform: rotate(0deg);
+       }
+        100%{
+            transform: rotate(30deg);
+       }
+   }
+
+    @keyframes move {
+        0%{
+            transform: translateX(0px);
+       }
+        100%{
+            transform: translateX(-70px);
+       }
+   }
+</style>
+<body>
+<div class="eat-peas">
+    <!-- 头部 -->
+    <div class="head">
+        <div class="eye"></div>
+    </div>
+    <!-- 豆子 -->
+    <div class="peas"></div>
+</div>
+</body>

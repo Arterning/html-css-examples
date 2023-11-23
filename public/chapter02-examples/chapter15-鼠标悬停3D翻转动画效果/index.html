@@ -1,0 +1,88 @@
+<style>
+    body,h3,p{
+        margin:0;/*去掉body自带的默认外边距*/
+      
+   }
+
+    .container{
+        width:1290px;
+        margin:100px auto 0px;
+   }
+    .scene-3d{
+        width:300px;
+        height: 300px;
+        /* border:2px solid red; */
+        margin:15px;
+        float: left;
+        perspective: 800px;  
+   }
+    .scene-3d .box{
+        width:300px;
+        height: 300px;
+        background-color: yellow;
+        transition:transform ease 2s;
+        position: relative;
+        transform-style: preserve-3d;
+   }
+    .scene-3d:hover .box{
+        transform:rotateY(-180deg);
+   }
+    .scene-3d .box .box-front,.scene-3d .box .box-mid{
+        width:300px;
+        height: 300px;
+        background-color: pink;
+        position: absolute;
+        left:0px;
+        top:0px;
+        z-index: 2;
+   }
+    .scene-3d .box .box-mid{
+        background-color:rgba(0,0,0,0.6);
+        transform: translateZ(-1px);
+   }
+    .scene-3d .box .box-back{
+        /* width:300px;
+       height: 300px; */
+        width: 200px;
+        height: 200px;
+        background-image: linear-gradient(to bottom right,#f6a94f,#c3d7db,#1c8f9e);
+        position: absolute;
+        /* left:0px;
+       top:0px; */
+        top:50%;
+        left:50%;
+        margin-top:-100px;
+        margin-left:-100px;
+        transform: translateZ(-100px) rotateY(-180deg);
+        padding:20px;
+        box-sizing: border-box;
+   }
+    .box-back h3{
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom:10px;
+   }
+    .box-back p{
+        font-size: 14px;
+        line-height: 25px;  
+   }
+</style>
+
+<body>
+    <div class="scene-3d">
+        <div class="box">
+            <div class="box-front">
+                <img src="images/3d01.jpg" alt="" width="300" height="300">
+            </div>
+            <div class="box-mid"></div>
+            <div class="box-back">
+                <h3>中国摄影网素材</h3>
+                <p>湖光山色风景图片,主题为村庄风景,可用作山村景色、民居、山水风景、南湾湖等相关设计的参考图片素材</p>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>

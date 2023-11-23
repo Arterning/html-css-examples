@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 
+        不定向水平居中，不论分页页数是多少，仍然水平居中
+        1. 使用text-align: center进行水平居中
+     -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            height: 200px;
+            background-color: aquamarine;
+
+            text-align: center;
+
+            /* 去除因为空格回车产生的间隙 */
+            font-size: 0;
+
+            padding: 20px 0px;
+        }
+
+        .container a, .container span {
+            border: 1px solid #ddd;
+            background-color: #fff;
+            /* 设置行内块 就可以加宽度高度了 */
+            display: inline-block;
+            /* width: 30px; */
+            height: 30px;
+            text-decoration: none;
+
+            /* 垂直居中 */
+            line-height: 30px;
+
+            color: #333;
+
+            padding: 0 10px;
+
+            font-size: 16px;
+            margin: 0 2px;
+
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <a href="">&lt;</a>
+        <span>1</span>
+        <a href="">1</a>
+        <a href="">2</a>
+        <a href="">3</a>
+        <a href="">4</a>
+        <a href="">5</a>
+        <a href="">5</a>
+        <a href="">5</a>
+        <a href="">...</a>
+        <a href="">100</a>
+        <a href="">&gt;</a>
+    </div>
+</body>
+</html>

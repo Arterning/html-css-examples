@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 
+        酷狗音乐热门榜单
+    
+    -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: 350px;
+            /* 高度只是暂时设置 */
+            height: 500px;
+            border: 1px solid;
+
+
+            margin: 50px auto 0px;
+            background-color: aquamarine;
+        }
+
+        .container h3 {
+            font-weight: 100;
+            
+            /* 垂直居中 */
+            height: 40px;
+            line-height: 40px;
+        }
+
+        .container h3 span {
+            font-size: 28px;
+        }
+        .container h3 span i {
+            color: #00a7f6;
+            font-style: normal;
+        }
+
+        .music {
+            /* 因为父盒子有98的固定高度 所以不需要clearFloat */
+            height: 98px;
+            background-color: #f6f6f6;
+
+            margin-top: 20px;
+        }
+
+        .music-img {
+
+            height: 98px;
+            width: 98px;
+            background-color: aqua;
+
+            float: left;
+        }
+
+        .music-text {
+
+            width: 232px;
+            height: 98px;
+            background-color: beige;
+
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h3><span><i>热门</i>榜单</span><a href="" style="float: right;">更多</a></h3>
+
+        <div class="music">
+            <div class="music-img">
+                <a href="">
+                    <img src="" alt="" width="98" height="98">
+                </a>
+            </div>
+            <div class="music-text">
+                <h4 style="padding: 8px 0px;">酷狗音乐热门榜单</h4>
+                <p style="font-size: 14px; line-height: 15px;">
+                    1. 床前明月光，疑是地上霜--<span>唐诗三百首</span>
+                </p>
+                <p style="font-size: 14px; line-height: 15px;">
+                    2. 床前明月光，疑是地上霜--<span>唐诗三百首</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="music">
+            <div class="music-img">
+
+            </div>
+            <div class="music-text">
+
+            </div>
+        </div>
+
+
+        <div class="music">
+            <div class="music-img">
+
+            </div>
+            <div class="music-text">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

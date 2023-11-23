@@ -1,0 +1,174 @@
+<style>
+    body{
+        margin:0;
+   }
+    a{
+        text-decoration: none;
+   }
+    .container{
+        width:100%;
+        min-width:680px;
+        /* height: 600px; */
+        /* background-color:antiquewhite; */
+        margin-top:100px;
+
+        
+        display: flex;
+        /* 允许换行 */
+        flex-wrap: wrap;
+   }
+    .container .item:nth-child(odd){
+        /* background-color:bisque; */
+   }
+
+   /* 对于每一个item 也是使用flex 布局 竖向排列 */
+    .container .item{
+        width:25%;
+        /* background-color: aquamarine; */
+        display: flex;  
+        justify-content: center;
+        margin-bottom:20px;
+   }
+
+    .container .item .item-con{
+        width:150px;
+        /* border:2px solid red; */
+        display: flex;
+        flex-direction: column;
+   }
+    .container .item .item-con:hover a{
+        color:#009af3
+   }
+    .container .item .item-con a.item-con-img{
+        /* border:2px solid blue; */
+        height: 150px;
+        overflow: hidden;
+        position: relative;
+   }
+    .container .item .item-con a.item-con-img img{
+        display: block;
+        border-radius: 10px;
+   }
+    .item-con a.item-con-img::after{
+        display: block;
+        content: "";
+        width:100%;
+        height: 50%;
+        background-image: linear-gradient(to bottom,rgba(255,255,255,0),rgba(0,0,0,0.5));
+        position: absolute;
+        left:0px;
+        bottom:0px;
+        border-radius: 0px 0px 10px 10px;
+   }
+    .item-con a.item-con-img span{
+        position: absolute;
+        bottom:10px;
+        left:10px;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        color:#fff;
+        z-index: 1;
+   }
+    .item-con a.item-con-img span img{
+        margin-right:5px;
+   }
+    .item-con a.item-con-ti{
+        font-size: 14px;
+        color: #000;
+        margin-top: 10px;
+   }
+</style>
+</head>
+<body>
+<div class="container">
+   <div class="item">
+       <div class="item-con">
+           <a href="" class="item-con-img">
+               <img src="images/flex-01.jpg" alt="" class="img">
+               <span><img src="images/icon_play.png" alt="" width="14">2444.万</span>
+           </a>
+           <a href="" class="item-con-ti">
+               催眠：Delta脑波音乐减压深度睡眠
+           </a>
+       </div>
+   </div>
+   <div class="item">
+       <div class="item-con">
+           <a href="" class="item-con-img">
+               <img src="images/flex-02.jpg" alt="" >
+               <span><img src="images/icon_play.png" alt="" width="14">2444.万</span>
+           </a>
+           <a href="" class="item-con-ti">
+               失眠急效药 | 钢琴森林
+           </a>
+       </div>
+   </div>
+   <div class="item">
+       <div class="item-con">
+           <a href="" class="item-con-img">
+               <img src="images/flex-03.jpg" alt="" >
+               <span><img src="images/icon_play.png" alt="" width="14">2444.万</span>
+           </a>
+           <a href="" class="item-con-ti">
+               钢琴轻轻奏 | 甜梦静静来
+           </a>
+       </div>
+   </div>
+   <div class="item">
+       <div class="item-con">
+           <a href="" class="item-con-img">
+               <img src="images/flex-04.jpg" alt="" >
+               <span><img src="images/icon_play.png" alt="" width="14">2444.万</span>
+           </a>
+           <a href="" class="item-con-ti">
+               琴音解忧愁 | 悠然入梦乡
+           </a>
+       </div>
+   </div>
+   <div class="item">
+       <div class="item-con">
+           <a href="" class="item-con-img">
+               <img src="images/flex-05.jpg" alt="" >
+               <span><img src="images/icon_play.png" alt="" width="14">2444.万</span>
+           </a>
+           <a href="" class="item-con-ti">
+               音符月下舞|呵护睡眠
+           </a>
+       </div>
+   </div>
+   <div class="item">
+       <div class="item-con">
+           <a href="" class="item-con-img">
+               <img src="images/flex-06.jpg" alt="" >
+               <span><img src="images/icon_play.png" alt="" width="14">2444.万</span>
+           </a>
+           <a href="" class="item-con-ti">
+               白昼在消失 （减压，助眠）
+           </a>
+       </div>
+   </div>
+   <div class="item">
+       <div class="item-con">
+           <a href="" class="item-con-img">
+               <img src="images/flex-07.jpg" alt="" >
+               <span><img src="images/icon_play.png" alt="" width="14">2444.万</span>
+           </a>
+           <a href="" class="item-con-ti">
+                Healing Piano in the Night
+           </a>
+       </div>
+   </div>
+   <div class="item">
+       <div class="item-con">
+           <a href="" class="item-con-img">
+               <img src="images/flex-08.jpg" alt="" >
+               <span><img src="images/icon_play.png" alt="" width="14">2444.万</span>
+           </a>
+           <a href="" class="item-con-ti">
+               润泽你的梦境，绵绵细雨
+           </a>
+       </div>
+   </div>
+</div>
+</body>

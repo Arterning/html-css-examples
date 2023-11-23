@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .checkbox-inline {
+            position: relative;
+        }
+
+        .checkbox {
+            position: absolute;
+            width: 0;
+            height: 0;
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 2px;
+            left: 0;
+            height: 15px;
+            width: 15px;
+            border: 1px solid;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+
+        .hobby {
+            padding-left: 20px;
+        }
+
+        .checkbox-inline input:checked~.checkmark {
+            background-color: #492c94;
+        }
+
+        .checkbox-inline input:checked~.checkmark:after {
+            display: block;
+        }
+
+        .checkbox-inline .checkmark:after {
+            display: none;
+            content: '';
+            position: absolute;
+            left: 4px;
+            top: 0;
+            width: 4px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        div {
+  width: 500px;
+  height: 100px;
+  background-color: lightblue;
+  margin-left: auto;
+}
+    </style>
+</head>
+
+<body>
+    <label class="checkbox-inline">
+        <input type="checkbox" class="checkbox" name="hobby" />
+        <span class="hobby">羽毛球</span>
+        <span class="checkmark"></span>
+    </label>
+    <label class="checkbox-inline">
+        <input type="checkbox" class="checkbox" name="hobby" />
+        <span class="hobby">跑步</span>
+        <span class="checkmark"></span>
+    </label>
+
+    <div>fff</div>
+</body>
+
+</html>

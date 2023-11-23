@@ -1,0 +1,61 @@
+
+<style>
+    body{
+        margin:0px;
+    }
+    .clearfix::after{
+        content:"";
+        display: block;
+        clear: both;
+    }
+    .container{
+        width:1200px;
+        /* height:370px; */
+        margin:100px auto 0px;
+        /* background-color: skyblue; */
+    }
+    .container .item{
+        width: 280px;
+        height:370px;
+        background-color: pink;
+        margin:0px 10px;
+        float:left;
+        position: relative;
+    }
+    .container .item .item-mask{
+        background-color: rgba(0,0,0,0);/*鼠标滑动前，是看不到，所以透明度设置为0*/
+        position:absolute;
+        left:0px;
+        right:0px;
+        top:0px;
+        bottom:0px;
+        /* transition参数 : 属性 动画曲线 时间 */
+        transition: background-color, ease .5s;
+    }
+
+    /* hover 改变元素的样式 */
+    .container .item:hover .item-mask{
+        background-color: rgba(0,0,0,0.5);
+    }
+</style>
+
+<body>
+<div class="container clearfix">
+    <div class="item">
+        <img src="images/hover1.jpg" alt="" width="280">
+        <div class="item-mask"></div>    
+    </div>
+    <div class="item">
+        <img src="images/hover2.jpg" alt="" width="280">
+        <div class="item-mask"></div>    
+    </div>
+    <div class="item">
+        <img src="images/hover3.jpg" alt="" width="280">
+        <div class="item-mask"></div>    
+    </div>
+    <div class="item">
+        <img src="images/hover4.jpg" alt="" width="280">
+        <div class="item-mask"></div>    
+    </div>
+</div>
+</body>

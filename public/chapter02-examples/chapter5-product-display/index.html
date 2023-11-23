@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 
+        总结：
+        1. flow布局 从上到下
+        2. font-size=0 可以去掉图片之间的空隙
+        3. text-align 设置 水平居中
+        4. 最外层设置一个a标签 让所有子元素都是可以点击
+        5. 取消a标签默认样式
+        6. img是行内元素 默认水平摆放
+        7. a标签默认行内元素，需要display:block转换为block元素
+     -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+            display: block;
+        }
+
+        .container {
+            background-color: aquamarine;
+            width: 308px;
+            height: 500px;
+
+            /* 上 左右 下 */
+            margin: 50px auto 0px;
+
+            /* 水平居中 */
+            text-align: center;
+        }
+
+        .desc {
+            font-size: 16px;
+
+        }
+
+        .detail {
+
+            width: 308px;
+
+            background-color: #f8f8f8;
+            margin-top: 20px;
+            padding: 15px;
+        }
+
+        .mark {
+            /* 这样设置可以去除空格和换行产生的缝隙 */
+            font-size: 0;
+        }
+
+        .mark img {
+            /* 上下 左右 */
+            margin: 0px 2px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <a href="http://www.google.com">
+            <img src="hui.png" alt="" height="500" width="auto">
+            <p class="desc">
+                这是一个简单的图片
+            </p>
+            <div class="detail">
+                <div class="mark">
+                    <!-- 换行会产生缝隙 -->
+                    <img src="" alt="" height="20">
+                    <img src="" alt="" height="20">
+                    <img src="" alt="" height="20">
+                </div>
+                <h3>espn nba theme</h3>
+                <p>2323</p>
+            </div>
+        </a>
+    </div>
+</body>
+</html>
