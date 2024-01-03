@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #draggableDiv {
+            width: 200px;
+            height: 150px;
+            background-color: lightblue;
+            position: absolute;
+            cursor: grab;
+        }
+    </style>
+    <title>可拖动的 div</title>
+</head>
+<body>
+
+<div id="draggableDiv">
+    <!-- 这里可以放入弹出框的内容 -->
+    拖动我
+</div>
+
+<script>
+    // 获取可拖动的 div 元素
+    var draggableDiv = document.getElementById('draggableDiv');
+
+    // 初始化鼠标位置
+    var offsetX, offsetY;
+
+    // 设置鼠标按下时的事件监听器
+    draggableDiv.addEventListener('mousedown', function(e) {
+        // 记录鼠标按下时的位置
+        offsetX = e.clientX - draggableDiv.getBoundingClientRect().left;
+        offsetY = e.clientY - draggableDiv.getBoundingClientRect().top;
+
+        // 更改鼠标样式
+        draggableDiv.style.cursor = 'grabbing';
+
+        // 添加鼠标移动和释放的事件监听器
+        document.addEventListener('mousemove', dragMove);
+        document.addEventListener('mouseup', dragEnd);
+    });
+
+    // 定义鼠标移动时的事件处理函数
+    function dragMove(e) {
+        // 计算新的 div 位置
+        var newX = e.clientX - offsetX;
+        var newY = e.clientY - offsetY;
+
+        // 更新 div 的位置
+        draggableDiv.style.left = newX + 'px';
+        draggableDiv.style.top = newY + 'px';
+    }
+
+    // 定义鼠标释放时的事件处理函数
+    function dragEnd() {
+        // 移除事件监听器
+        document.removeEventListener('mousemove', dragMove);
+        document.removeEventListener('mouseup', dragEnd);
+
+        // 恢复鼠标样式
+        draggableDiv.style.cursor = 'grab';
+    }
+</script>
+
+</body>
+</html>
