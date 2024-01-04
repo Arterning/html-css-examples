@@ -8,6 +8,9 @@ dependencies:
   express:
     specifier: ^4.18.2
     version: registry.npmmirror.com/express@4.18.2
+  jquery:
+    specifier: ^3.7.1
+    version: registry.npmmirror.com/jquery@3.7.1
 
 devDependencies:
   nodemon:
@@ -456,6 +459,12 @@ packages:
     version: 7.0.0
     engines: {node: '>=0.12.0'}
     dev: true
+
+  registry.npmmirror.com/jquery@3.7.1:
+    resolution: {integrity: sha512-m4avr8yL8kmFN8psrbFFFmB/If14iN5o9nw/NgnnM+kybDJpRsAynV2BsfpTYrTRysYUdADVD7CkUUizgkpLfg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/jquery/-/jquery-3.7.1.tgz}
+    name: jquery
+    version: 3.7.1
+    dev: false
 
   registry.npmmirror.com/media-typer@0.3.0:
     resolution: {integrity: sha512-dq+qelQ9akHpcOl/gUVRTxVIOkAJ1wR3QAvb4RsVjS8oVoFjDGTc679wJYmUmknUF5HwMLOgb5O+a3KxfWapPQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/media-typer/-/media-typer-0.3.0.tgz}

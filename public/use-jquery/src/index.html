@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- use the jquery library in node_modules folder -->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+        $("button.continue").html("Next Step...")
+
+        function nextStep() {
+            $.ajax({
+                url: "http://localhost:3000/api/getWeather",
+                data: {
+                    zipcode: 97201
+                },
+                success: function (result) {
+                    $("#weather-temp").html("<strong>" + result.msg + "</strong> degrees");
+                    $(".container").append(`<div> api result is ${result.msg}</div>`);
+                }
+            });
+        }
+    </script>
+</head>
+
+<body class="container">
+    <button onclick="nextStep()" class="continue">Click Me</button>
+    <div id="weather-temp"></div>
+</body>
+
+</html>

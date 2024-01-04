@@ -1,0 +1,18 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  jquery:
+    specifier: ^3.7.1
+    version: registry.npmmirror.com/jquery@3.7.1
+
+packages:
+
+  registry.npmmirror.com/jquery@3.7.1:
+    resolution: {integrity: sha512-m4avr8yL8kmFN8psrbFFFmB/If14iN5o9nw/NgnnM+kybDJpRsAynV2BsfpTYrTRysYUdADVD7CkUUizgkpLfg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/jquery/-/jquery-3.7.1.tgz}
+    name: jquery
+    version: 3.7.1
+    dev: false
